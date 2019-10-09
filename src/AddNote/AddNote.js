@@ -115,7 +115,7 @@ export default class AddNote extends Component {
             </label>
             <input type='text' id='note-name-input' name='note-name'ref={this.nameInput} required/>
           </div>
-          <ValidationError hasError={!this.state.noteNameValid} message={this.state.validationMessage.name}/>
+          <ValidationError hasError={!this.state.noteNameValid} message={this.state.validationMessages.name}/>
           <div className='field'>
             <label htmlFor='note-content-input'>
               Content
@@ -135,7 +135,7 @@ export default class AddNote extends Component {
               )}
             </select>
           </div>
-          <ValidationError hasError={!this.state.folderValid} message={this.state.validationMessage.folder}/>
+          <ValidationError hasError={!this.state.folderValid} message={this.state.validationMessages.folder}/>
           <div className='buttons'>
             <button type='submit'  onClick={(e)=>this.setNote(this.nameInput.current.value, this.contentInput.current.value, this.folderInput.current.value)}>
               Add note
@@ -146,7 +146,3 @@ export default class AddNote extends Component {
     )
   }
 }
-
-// AddNote.propTypes = {
-//     history: PropTypes.shape({push: PropTypes.func})
-// }

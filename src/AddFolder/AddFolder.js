@@ -105,7 +105,3 @@ export default class AddFolder extends Component {
     )
   }
 }
-
-// AddFolder.propTypes = {
-//     history: PropTypes.shape({push:PropTypes.func})
-// }
